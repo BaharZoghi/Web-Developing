@@ -1,0 +1,64 @@
+
+body{
+background-color:  #dfe1e3;
+font-family: 'Raleway', serif;
+}
+
+#header-navbar{
+	background-color:  #6ec2bf;
+	border: 0;
+	border-radius: 0;
+}
+
+#brand-header{
+	margin: 0;
+}
+
+.nav li a{
+	padding: 10px 0px;
+	text-align: justify;
+	margin: 0px;
+	height: auto;
+}
+
+
+#nav-menu{
+	/*height: 50px;*/
+	padding: 0px;
+	line-height: 20px;
+	margin: 0px;
+	text-decoration: none;
+}
+
+
+#nav-list{
+	height: auto;
+	padding: 0px 15px;
+	background-color: #abe3d0;
+}
+
+#nav-list:hover{
+	background-color: #a3b8a9;
+}
+
+.dist-color{
+	background-color: #e8dbc3;
+}
+
+/*.dist-color:hover{
+	background-color: #8a847e;
+}*/
+
+.navbar-header button.navbar-toggle, .navbar-header .icon{
+	border: 1px solid #8a847e;
+}
+
+#collapsable-navigggg{
+	padding: 0;
+}
+
+.pi-color{
+	background-color: #cce7e1;
+	padding: 0px 15px;
+	margin: 0px 10px;
+}
