@@ -24,6 +24,7 @@
 	}
 
 	window.byeSpeaker = byeSpeaker;
+	
 })(window);
 
 
