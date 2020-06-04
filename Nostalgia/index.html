@@ -1,33 +1,40 @@
-<script>
-    var tag = document.createElement('script');
-    tag.src = "//www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Youtube Gallery</title>
 
-    function onYouTubeIframeAPIReady() {
-        var $ = jQuery;
-        var players = [];
-        $('iframe').filter(function(){return this.src.indexOf('http://www.youtube.com/') == 0}).each( function (k, v) {
-            if (!this.id) { this.id='embeddedvideoiframe' + k }
-            players.push(new YT.Player(this.id, {
-                events: {
-                    'onStateChange': function(event) {
-                        if (event.data == YT.PlayerState.PLAYING) {
-                            $.each(players, function(k, v) {
-                                if (this.getIframe().id != event.target.getIframe().id) {
-                                    this.pauseVideo();
-                                }
-                            });
-                        }
-                    }
-                }
-            }))
-        });
-    }
-</script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- <link rel="stylesheet" href="css/uikit.min.css" /> -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">	
 
-One: 
-<iframe frameborder="0" allowfullscreen="1" title="YouTube video player" width="160" height="100" src="http://www.youtube.com/embed/M7lc1UVf-VE"></iframe>
-<br/>
-Two:
-<iframe frameborder="0" allowfullscreen="1" title="YouTube video player" width="160" height="100" src="http://www.youtube.com/embed/LTy0TzA_4DQ"></iframe>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<!-- <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script> -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<form action="#">
+					<p><input type="text" id="search" placeholder="Search" autocomplete="off" class="form-control"></p>
+					<p><input type="submit" value="Search" class="form-control btn btn-primary w100"></p>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div id="results">
+				<!-- <div id="results"></div> -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>
