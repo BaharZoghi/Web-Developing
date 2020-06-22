@@ -9,7 +9,6 @@ $(function(){
 			q: encodeURIComponent($("#search").val()).replace(/%20/g, "+"),
 			maxResults: 9,
 			order: "relevance",
-			h1:"en_US"
 		});
 		request.execute(function(response){
 			var results=response.result;
@@ -20,29 +19,36 @@ $(function(){
                 });
             });
 		});
-		
-		var players = [];
-        $("iframe").filter(function(){return src.indexOf('http://www.youtube.com/') == 0}).each( function (k, v) {
-            if (!id) { id='embeddedvideoiframe' + k }
-            players.push(new YT.Player(id, {
-                events: {
-                    'onStateChange': function(event) {
-                        if (event.data == YT.PlayerState.PLAYING) {
-                            $.each(players, function(k, v) {
-                                if (getIframe().id != event.target.getIframe().id) {
-                                    pauseVideo();
-                                }
-                            });
-                        }
+	});
+});
+
+var tag = document.createElement('script');
+tag.src = "//www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+$(function onYouTubeIframeAPIReady() {
+    var players = [];
+    $('iframe').filter(function(){return this.src.indexOf('http://www.youtube.com/') == 0}).each( function (k, v) {
+        if (!this.id) { this.id='embeddedvideoiframe' + k }
+        players.push(new YT.Player(this.id, {
+            events: {
+                'onStateChange': function(event) {
+                    if (event.data == YT.PlayerState.PLAYING) {
+                        $.each(players, function(k, v) {
+                            if (this.getIframe().id != event.target.getIframe().id) {
+                                this.pauseVideo();
+                            }
+                        });
                     }
                 }
-            }))
-        });
-	});
+            }
+        }));
+    });
 });
 
 
 function init(){
-	gapi.client.setApiKey("AIzaSyBvgDURzyjNXXvZGv6y9950P5kWJLuTWTM");
+	gapi.client.setApiKey("AIzaSyD-DNpjOdTfgYXH5id4wamQOrbPs0V07XA");
 	gapi.client.load("youtube", "v3", function(){});
 }
