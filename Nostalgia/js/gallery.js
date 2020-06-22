@@ -22,32 +22,6 @@ $(function(){
 	});
 });
 
-var tag = document.createElement('script');
-tag.src = "//www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-$(function onYouTubeIframeAPIReady() {
-    var players = [];
-    $('iframe').filter(function(){return this.src.indexOf('http://www.youtube.com/') == 0}).each( function (k, v) {
-        if (!this.id) { this.id='embeddedvideoiframe' + k }
-        players.push(new YT.Player(this.id, {
-            events: {
-                'onStateChange': function(event) {
-                    if (event.data == YT.PlayerState.PLAYING) {
-                        $.each(players, function(k, v) {
-                            if (this.getIframe().id != event.target.getIframe().id) {
-                                this.pauseVideo();
-                            }
-                        });
-                    }
-                }
-            }
-        }));
-    });
-});
-
-
 function init(){
 	gapi.client.setApiKey("AIzaSyD-DNpjOdTfgYXH5id4wamQOrbPs0V07XA");
 	gapi.client.load("youtube", "v3", function(){});
