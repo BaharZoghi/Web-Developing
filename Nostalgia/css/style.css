@@ -21,6 +21,14 @@ body {
     padding-bottom: 12px;
 }
 
+.video-responsive button{
+/*    left:0;
+    top:0;*/
+    position:absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
 .video-margin{
 	margin-top: 0px;
 	/*padding-left: 12px;*/
