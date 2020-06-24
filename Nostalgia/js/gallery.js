@@ -22,7 +22,8 @@ $(function(){
 	});
 });
 
+
 function init(){
-	gapi.client.setApiKey("AIzaSyD-DNpjOdTfgYXH5id4wamQOrbPs0V07XA");
+	gapi.client.setApiKey("AIzaSyCrz04Ul5JT099Uz8f_5Djagj_sbUH-FRU");
 	gapi.client.load("youtube", "v3", function(){});
 }
