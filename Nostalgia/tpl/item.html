@@ -1,5 +1,15 @@
 <div class="item video-responsive col-md-4 playpause">
+	<script>
+		function buttonValue(){
+			console.log(document.getElementById('myButton').value)
+		}
+	</script>
+
 	<iframe class="video w100" src="//www.youtube.com/embed/{{videoid}}" frameborder="0" allowfullscreen>
 	</iframe>
-	<button type="button">ADD</button>
+	<button id="myButton" type="button" value="no_name" onclick="buttonValue()">ADD</button>
+
+	<script>
+		document.getElementById('myButton').value = {{videoid}}
+	</script>
 </div>
