@@ -20,10 +20,11 @@ $(function(){
 		request.execute(function(response){
 			var results=response.result;
 			console.log(results);
-			$("#results").append("<script type=\"text/javascript\">$(\"button\").click(function() {var fired_button = $(this).val();console.log(fired_button);});</script>");
+			// $("#results").append("<script type=\"text/javascript\">$(\"button\").click(function() {var fired_button = $(this).val();console.log(fired_button);});</script>");
             $.each(results.items, function(index, item){
 //                $("#results").append(item.snippet.title+ " " + item.id.videoId + "<br>");
                 $.get("tpl/item.html", function(data){
+                	$("#results").append("<script type=\"text/javascript\">$(\"button\").click(function() {var fired_button = $(this).val();console.log(fired_button);});</script>");
                     $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
                 });
             });
