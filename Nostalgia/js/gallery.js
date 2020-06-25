@@ -19,6 +19,7 @@ $(function(){
 		});
 		request.execute(function(response){
 			var results=response.result;
+			console.log(results);
             $.each(results.items, function(index, item){
 //                $("#results").append(item.snippet.title+ " " + item.id.videoId + "<br>");
                 $.get("tpl/item.html", function(data){
