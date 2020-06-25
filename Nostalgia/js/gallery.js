@@ -1,7 +1,7 @@
 function tplawesome(e,t){
 	res=e;
 	for(var n=0;n<t.length;n++){
-		console.log(n);
+		console.log(t.length);
 		res=res.replace(/\{\{(.*?)\}\}/g,function(e,r){
 			return t[n][r]}
 			)}
