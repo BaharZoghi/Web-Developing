@@ -1,13 +1,19 @@
 <div class="item video-responsive col-md-4 playpause">
-	<script>
+<!-- 	<script>	onclick="buttonValue()"
 		function buttonValue(){
 			console.log(document.getElementById('myButton').value)
 		}
+	</script> -->
+	<script type="text/javascript">
+	$("button").click(function() {
+	    var fired_button = $(this).val();
+	    alert(fired_button);
+	});
 	</script>
 
 	<iframe class="video w100" src="//www.youtube.com/embed/{{videoid}}" frameborder="0" allowfullscreen>
 	</iframe>
-	<button id="myButton" type="button" value="{{videoid}}" onclick="buttonValue()">ADD</button>
+	<button id="myButton" type="button" value="{{videoid}}">ADD</button>
 
 <!-- 	<script>
 		document.getElementById('myButton').value = {{videoid}}
