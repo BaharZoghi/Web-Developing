@@ -5,6 +5,13 @@
 		}
 	</script> -->
 
+	<script type="text/javascript">
+	$("button").click(function() {
+	    var fired_button = $(this).val();
+	    console.log(fired_button);
+	});
+	</script>
+
 	<iframe class="video w100" src="//www.youtube.com/embed/{{videoid}}" frameborder="0" allowfullscreen>
 	</iframe>
 	<button id="myButton" type="button" value="{{videoid}}">ADD</button>
