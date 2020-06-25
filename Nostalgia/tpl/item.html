@@ -12,14 +12,14 @@
 	});
 	</script> -->
 	<script>
-		$( "button" ).one( "click", function() {
+		$( ".{{videoid}}" ).one( "click", function() {
 	  		alert( "This will be displayed only once." );
 		});
 	</script>
 
 	<iframe class="video w100" src="//www.youtube.com/embed/{{videoid}}" frameborder="0" allowfullscreen>
 	</iframe>
-	<button id="myButton" type="button" value="{{videoid}}">ADD</button>
+	<button id="myButton" type="button" value="{{videoid}}" class="{{videoid}}">ADD</button>
 
 <!-- 	<script>
 		document.getElementById('myButton').value = {{videoid}}
