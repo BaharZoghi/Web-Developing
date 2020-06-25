@@ -10,6 +10,13 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">	
 
+    <script type="text/javascript">
+	$("button").click(function() {
+	    var fired_button = $(this).val();
+	    console.log(fired_button);
+	});
+	</script>
+
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<!-- <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script> -->
@@ -19,13 +26,6 @@
 
 </head>
 <body>
-	<script type="text/javascript">
-	$("button").click(function() {
-	    var fired_button = $(this).val();
-	    console.log(fired_button);
-	});
-	
-	</script>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
