@@ -16,6 +16,28 @@
 	  		var button_val = $(this).val();
 	    	console.log(button_val);
 	    	$(".{{videoid}}").html("ADDED");
+
+	    	return gapi.client.youtube.playlistItems.insert({
+      "part": [
+        "snippet"
+      ],
+      "resource": {
+        "snippet": {
+          "playlistId": "PLYdc5Hf4OFHgoYj36r-yQsQsm3XAaxO5c",
+          "position": 0,
+          "resourceId": {
+            "kind": "youtube#video",
+            "videoId": button_val
+          }
+        }
+      }
+    })
+        .then(function(response) {
+                // Handle the results here (response.result has the parsed body).
+                console.log("Response", response);
+              },
+              function(err) { console.error("Execute error", err); });
+        
 		});
 	</script>
 
