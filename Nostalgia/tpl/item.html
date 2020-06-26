@@ -12,9 +12,10 @@
 	});
 	</script> -->
 	<script>
-		$( ".{{videoid}}" ).click(function() {
+		$( ".{{videoid}}" ).one( "click", function() {
 	  		var button_val = $(this).val();
 	    	console.log(button_val);
+	    	$(".{{videoid}}").html("ADDED");
 		});
 	</script>
 
