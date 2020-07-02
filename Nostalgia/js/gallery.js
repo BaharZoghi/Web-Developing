@@ -33,8 +33,8 @@ $(function(){
 	});
 });
 
-/*
+
 function init(){
 	gapi.client.setApiKey("AIzaSyBSp6Q1MToyh1AdYw-CQUGWiUDeQK6TZv8");
 	gapi.client.load("youtube", "v3", function(){});
-}*/
+}
