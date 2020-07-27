@@ -1,5 +1,4 @@
-<script src="https://apis.google.com/js/api.js"></script>
-<script>
+
   /**
    * Sample JavaScript code for youtube.search.list
    * See instructions for running APIs Explorer code samples locally:
@@ -33,13 +32,17 @@
     })
         .then(function(response) {
                 // Handle the results here (response.result has the parsed body).
-                console.log("Response", response);
+                var results=response.result;
+                $.each(results.items, function(index, item){
+    //                $("#results").append(item.snippet.title+ " " + item.id.videoId + "<br>");
+                    $.get("tpl/item.html", function(data){
+                        $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
+                    });
+                });
               },
               function(err) { console.error("Execute error", err); });
   }
   gapi.load("client:auth2", function() {
     gapi.auth2.init({client_id: "540776227486-nlv1uh6np49395022eft3t1e41msi1ru.apps.googleusercontent.com"});
   });
-</script>
-<button onclick="authenticate().then(loadClient)">authorize and load</button>
-<button onclick="execute()">execute</button>
+

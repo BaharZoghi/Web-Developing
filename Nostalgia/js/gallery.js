@@ -8,6 +8,40 @@ function tplawesome(e,t){
 		return res}
 
 
+function authenticate() {
+    return gapi.auth2.getAuthInstance()
+        .signIn({scope: "https://www.googleapis.com/auth/youtube.force-ssl"})
+        .then(function() { console.log("Sign-in successful"); },
+              function(err) { console.error("Error signing in", err); });
+}
+
+
+
+function execute() {
+    return gapi.client.youtube.playlistItems.insert({
+      "part": [
+        "snippet"
+      ],
+      "resource": {
+        "snippet": {
+          "playlistId": "PLYdc5Hf4OFHgoYj36r-yQsQsm3XAaxO5c",
+          "position": 0,
+          "resourceId": {
+            "kind": "youtube#video",
+            "videoId": "D1vcT1cDcEc"
+          }
+        }
+      }
+    })
+        .then(function(response) {
+                // Handle the results here (response.result has the parsed body).
+                console.log("Response", response);
+              },
+              function(err) { console.error("Execute error", err); });
+  }
+
+
+
 $(function(){
 	$("form").on("submit", function(e){
 		e.preventDefault();
@@ -33,8 +67,13 @@ $(function(){
 	});
 });
 
+gapi.load("client:auth2", function() {
+    gapi.auth2.init({client_id: "540776227486-nlv1uh6np49395022eft3t1e41msi1ru.apps.googleusercontent.com"});
+});
+
 
 function init(){
 	gapi.client.setApiKey("AIzaSyBSp6Q1MToyh1AdYw-CQUGWiUDeQK6TZv8");
 	gapi.client.load("youtube", "v3", function(){});
 }
+
