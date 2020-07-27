@@ -17,7 +17,7 @@ function authenticate() {
 
 
 
-function execute() {
+function exec() {
     return gapi.client.youtube.playlistItems.insert({
       "part": [
         "snippet"
