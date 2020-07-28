@@ -1,4 +1,4 @@
-function tplawesome(e,t){
+/*function tplawesome(e,t){
 	res=e;
 	for(var n=0;n<t.length;n++){
 		console.log(t.length);
@@ -13,7 +13,7 @@ function authenticate() {
         .signIn({scope: "https://www.googleapis.com/auth/youtube.force-ssl"})
         .then(function() { console.log("Sign-in successful"); },
               function(err) { console.error("Error signing in", err); });
-}
+}*/
 
 
 
@@ -71,9 +71,9 @@ $(function(){
 
 
 
-gapi.load("client:auth2", function() {
+/*gapi.load("client:auth2", function() {
     gapi.auth2.init({client_id: "540776227486-nlv1uh6np49395022eft3t1e41msi1ru.apps.googleusercontent.com"});
-});
+});*/
 
 
 function init(){
