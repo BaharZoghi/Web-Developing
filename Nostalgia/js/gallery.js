@@ -1,4 +1,4 @@
-/*function tplawesome(e,t){
+function tplawesome(e,t){
 	res=e;
 	for(var n=0;n<t.length;n++){
 		console.log(t.length);
@@ -8,7 +8,7 @@
 		return res}
 
 
-function authenticate() {
+/*function authenticate() {
     return gapi.auth2.getAuthInstance()
         .signIn({scope: "https://www.googleapis.com/auth/youtube.force-ssl"})
         .then(function() { console.log("Sign-in successful"); },
