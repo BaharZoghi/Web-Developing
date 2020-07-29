@@ -11,6 +11,10 @@ function tplawesome(e,t){
 
 // function authenticate() {
     // return 
+    gapi.load("client:auth2", function() {
+    gapi.auth2.init({client_id: "145089069766-5vp3ftrk98ne5h9qogshjouhvj072d7g.apps.googleusercontent.com"});
+	});
+	
     gapi.auth2.getAuthInstance()
         .signIn({scope: "https://www.googleapis.com/auth/youtube.force-ssl"})
         .then(function() { console.log("Sign-in successful"); },
@@ -72,9 +76,7 @@ function exec() {
 
 
 
-gapi.load("client:auth2", function() {
-    gapi.auth2.init({client_id: "145089069766-5vp3ftrk98ne5h9qogshjouhvj072d7g.apps.googleusercontent.com"});
-});
+
 
 
 function init(){
