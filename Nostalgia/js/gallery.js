@@ -73,12 +73,12 @@ function exec() {
 
 
 gapi.load("client:auth2", function() {
-    gapi.auth2.init({client_id: "540776227486-nlv1uh6np49395022eft3t1e41msi1ru.apps.googleusercontent.com"});
+    gapi.auth2.init({client_id: "145089069766-5vp3ftrk98ne5h9qogshjouhvj072d7g.apps.googleusercontent.com"});
 });
 
 
 function init(){
-	gapi.client.setApiKey("AIzaSyCrz04Ul5JT099Uz8f_5Djagj_sbUH-FRU");
+	gapi.client.setApiKey("AIzaSyD-DNpjOdTfgYXH5id4wamQOrbPs0V07XA");
 	gapi.client.load("youtube", "v3", function(){});
 }
 
