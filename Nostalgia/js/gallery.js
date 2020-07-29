@@ -47,7 +47,7 @@ $(function(){
 
 
 
-/*function exec() {
+function exec() {
     return gapi.client.youtube.playlistItems.insert({
       "part": [
         "snippet"
@@ -68,7 +68,7 @@ $(function(){
                 console.log("Response", response);
               },
               function(err) { console.error("Execute error", err); });
-  }*/
+  }
 
 
 
