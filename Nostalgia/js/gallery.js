@@ -15,7 +15,7 @@ function authenticate() {
         .then(function() { console.log("Sign-in successful"); },
               function(err) { console.error("Error signing in", err); });
 }
-
+window.onload= authenticate;
 
 
 $(function(){
@@ -81,4 +81,5 @@ function init(){
 	gapi.client.setApiKey("AIzaSyD-DNpjOdTfgYXH5id4wamQOrbPs0V07XA");
 	gapi.client.load("youtube", "v3", function(){});
 }
+
 
