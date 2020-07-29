@@ -72,9 +72,9 @@ function exec() {
 
 
 
-/*gapi.load("client:auth2", function() {
+gapi.load("client:auth2", function() {
     gapi.auth2.init({client_id: "540776227486-nlv1uh6np49395022eft3t1e41msi1ru.apps.googleusercontent.com"});
-});*/
+});
 
 
 function init(){
