@@ -16,10 +16,10 @@ function tplawesome(e,t){
 
      function initClient() {
         gapi.client.init({
-            apiKey: "AIzaSyD-DNpjOdTfgYXH5id4wamQOrbPs0V07XA",
-            discoveryDocs: "https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest",
-            clientId: "145089069766-5vp3ftrk98ne5h9qogshjouhvj072d7g.apps.googleusercontent.com",
-            scope: "https://www.googleapis.com/auth/youtube.force-ssl"
+            'apiKey': 'AIzaSyD-DNpjOdTfgYXH5id4wamQOrbPs0V07XA',
+            'discoveryDocs': ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"],
+            'clientId': '145089069766-5vp3ftrk98ne5h9qogshjouhvj072d7g.apps.googleusercontent.com',
+            'scope': 'https://www.googleapis.com/auth/youtube.force-ssl'
         }).then(function () {
         	console.log("Helloooooooooooooo!");
         });
