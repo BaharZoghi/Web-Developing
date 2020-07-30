@@ -98,7 +98,7 @@ function execVideoAdd(buttonValue) {
 
 
 
-/*  function execCreatePlaylist() {
+  function execCreatePlaylist() {
     return gapi.client.youtube.playlists.list({
       "part": [
         "snippet,contentDetails"
@@ -111,12 +111,12 @@ function execVideoAdd(buttonValue) {
                 console.log("Response", response);
               },
               function(err) { console.error("Execute error", err); });
-  }*/
+  }
 
 
 
 
-    function execCreatePlaylist() {
+/*    function execCreatePlaylist() {
     var request=gapi.client.youtube.playlists.list({
       "part": [
         "snippet,contentDetails"
@@ -130,7 +130,7 @@ function execVideoAdd(buttonValue) {
               },
               function(err) { console.error("Execute error", err); });
   }
-
+*/
 
 
 
