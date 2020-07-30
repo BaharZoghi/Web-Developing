@@ -9,16 +9,31 @@ function tplawesome(e,t){
 	}
 
 
+	function handleClientLoad() {
+        // Load the API client and auth2 library
+        gapi.load('client:auth2', initClient);
+     }
+
+     function initClient() {
+        gapi.client.init({
+            apiKey: "AIzaSyD-DNpjOdTfgYXH5id4wamQOrbPs0V07XA",
+            discoveryDocs: "https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest",
+            clientId: "145089069766-5vp3ftrk98ne5h9qogshjouhvj072d7g.apps.googleusercontent.com",
+            scope: "https://www.googleapis.com/auth/youtube.force-ssl"
+        }).then(function () {});
+      }
+
+
 // function authenticate() {
     // return 
-    gapi.load("client:auth2", function() {
+/*    gapi.load("client:auth2", function() {
     gapi.auth2.init({client_id: "145089069766-5vp3ftrk98ne5h9qogshjouhvj072d7g.apps.googleusercontent.com"});
 	});
-	
+
     gapi.auth2.getAuthInstance()
         .signIn({scope: "https://www.googleapis.com/auth/youtube.force-ssl"})
         .then(function() { console.log("Sign-in successful"); },
-              function(err) { console.error("Error signing in", err); });
+              function(err) { console.error("Error signing in", err); });*/
 // }
 
 
@@ -79,9 +94,9 @@ function exec() {
 
 
 
-function init(){
+/*function init(){
 	gapi.client.setApiKey("AIzaSyD-DNpjOdTfgYXH5id4wamQOrbPs0V07XA");
 	gapi.client.load("youtube", "v3", function(){});
-}
+}*/
 
 
