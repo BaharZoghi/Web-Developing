@@ -21,7 +21,10 @@ function tplawesome(e,t){
             'clientId': '145089069766-5vp3ftrk98ne5h9qogshjouhvj072d7g.apps.googleusercontent.com',
             'scope': 'https://www.googleapis.com/auth/youtube.force-ssl'
         }).then(function () {
-        	console.log("Helloooooooooooooo!");
+        	gapi.auth2.getAuthInstance()
+      	    .signIn({scope: "https://www.googleapis.com/auth/youtube.force-ssl"})
+        	.then(function() { console.log("Sign-in successful"); },
+            function(err) { console.error("Error signing in", err); });
         });
       }
 
