@@ -13,15 +13,16 @@
 	</script> -->
 	<script>
 		$( ".{{videoid}}" ).one( "click", function() {
-	  		var button_val = $(this).val();
-	    	console.log(button_val);
+	  		/*var button_val = $(this).val();
+	    	console.log(button_val);*/
 
 /*	    	$.getScript("js/gallery.js", function(){
 				authenticate();
 			});*/
 
 	    	$.getScript("js/gallery.js", function(){
-				exec("{{videoid}}");
+				execVideoAdd("{{videoid}}");
+				execCreatePlaylist();
 			});
 
 	    	$(".{{videoid}}").html("ADDED");

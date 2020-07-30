@@ -71,7 +71,7 @@ $(function(){
 
 
 
-function exec(buttonValue) {
+function execVideoAdd(buttonValue) {
     return gapi.client.youtube.playlistItems.insert({
       "part": [
         "snippet"
@@ -86,6 +86,25 @@ function exec(buttonValue) {
           }
         }
       }
+    })
+        .then(function(response) {
+                // Handle the results here (response.result has the parsed body).
+                console.log("Response", response);
+              },
+              function(err) { console.error("Execute error", err); });
+  }
+
+
+
+
+
+  function execCreatePlaylist() {
+    return gapi.client.youtube.playlists.list({
+      "part": [
+        "snippet,contentDetails"
+      ],
+      "maxResults": 25,
+      "mine": true
     })
         .then(function(response) {
                 // Handle the results here (response.result has the parsed body).
