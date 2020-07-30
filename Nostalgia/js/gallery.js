@@ -16,9 +16,9 @@ function tplawesome(e,t){
 
      function initClient() {
         gapi.client.init({
-            'apiKey': 'AIzaSyD-DNpjOdTfgYXH5id4wamQOrbPs0V07XA',
+            'apiKey': 'AIzaSyBvgDURzyjNXXvZGv6y9950P5kWJLuTWTM',
             'discoveryDocs': ["https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"],
-            'clientId': '145089069766-5vp3ftrk98ne5h9qogshjouhvj072d7g.apps.googleusercontent.com',
+            'clientId': '540776227486-nlv1uh6np49395022eft3t1e41msi1ru.apps.googleusercontent.com',
             'scope': 'https://www.googleapis.com/auth/youtube.force-ssl'
         }).then(function () {
         	gapi.auth2.getAuthInstance()
