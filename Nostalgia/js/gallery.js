@@ -20,7 +20,9 @@ function tplawesome(e,t){
             discoveryDocs: "https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest",
             clientId: "145089069766-5vp3ftrk98ne5h9qogshjouhvj072d7g.apps.googleusercontent.com",
             scope: "https://www.googleapis.com/auth/youtube.force-ssl"
-        }).then(function () {});
+        }).then(function () {
+        	console.log("Helloooooooooooooo!");
+        });
       }
 
 
