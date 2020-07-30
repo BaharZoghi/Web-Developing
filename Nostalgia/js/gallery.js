@@ -71,7 +71,7 @@ $(function(){
 
 
 
-function exec() {
+function exec(buttonValue) {
     return gapi.client.youtube.playlistItems.insert({
       "part": [
         "snippet"
@@ -82,7 +82,7 @@ function exec() {
           "position": 0,
           "resourceId": {
             "kind": "youtube#video",
-            "videoId": "D1vcT1cDcEc"
+            "videoId": buttonValue
           }
         }
       }
