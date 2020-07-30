@@ -39,7 +39,7 @@ function tplawesome(e,t){
 // }
 
 
-/*$(function(){
+$(function(){
 	$("form").on("submit", function(e){
 		e.preventDefault();
 		var request=gapi.client.youtube.search.list({
@@ -90,7 +90,7 @@ function exec() {
               },
               function(err) { console.error("Execute error", err); });
   }
-*/
+
 
 
 
