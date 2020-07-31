@@ -114,6 +114,35 @@ function execVideoAdd(buttonValue) {
 
 
 
+  function createPlaylist() {
+    return gapi.client.youtube.playlists.insert({
+      "part": [
+        "snippet,status"
+      ],
+      "resource": {
+        "snippet": {
+          "title": "Nostalgia Therapy",
+          "description": "This is a sample playlist description.",
+          "tags": [
+            "sample playlist",
+            "API call"
+          ],
+          "defaultLanguage": "en"
+        },
+        "status": {
+          "privacyStatus": "private"
+        }
+      }
+    })
+        .then(function(response) {
+                // Handle the results here (response.result has the parsed body).
+                console.log("Response", response);
+              },
+              function(err) { console.error("Execute error", err); });
+  }
+
+
+
 
     function execCreatePlaylist() {
     var request=gapi.client.youtube.playlists.list({
@@ -128,17 +157,16 @@ function execVideoAdd(buttonValue) {
         request.execute(function(response){
 			var results=response.result;
 			console.log(results);
-			console.log(counter);
 			results.items.forEach(function(item){
 				console.log(item.snippet.title)
 				if (item.snippet.title == "Nostalgia Therapy") {
 					counter+= 1;
-					// playlist_id=
+					playlist_id= item.snippet.id;
 				}
 			})
-
+			console.log(counter);
 			if (counter==0){
-
+				createPlaylist();
 			}
               },
               function(err) { console.error("Execute error", err); });
