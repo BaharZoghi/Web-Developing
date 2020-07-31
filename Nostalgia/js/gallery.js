@@ -126,6 +126,7 @@ function execVideoAdd(buttonValue) {
         request.execute(function(response){
 			var results=response.result;
 			console.log(results);
+			results.items.forEach(item => console.log(item.snippet.title))
               },
               function(err) { console.error("Execute error", err); });
   }
