@@ -124,17 +124,22 @@ function execVideoAdd(buttonValue) {
       "mine": true
     })
     	var counter=0;
+    	var playlist_id="";
         request.execute(function(response){
 			var results=response.result;
-			// console.log(results);
+			console.log(results);
 			console.log(counter);
 			results.items.forEach(function(item){
 				console.log(item.snippet.title)
 				if (item.snippet.title == "Nostalgia Therapy") {
 					counter+= 1;
+					// playlist_id=
 				}
-				console.log(counter);
 			})
+
+			if (counter==0){
+
+			}
               },
               function(err) { console.error("Execute error", err); });
   }
