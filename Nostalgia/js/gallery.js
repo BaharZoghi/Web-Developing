@@ -123,10 +123,18 @@ function execVideoAdd(buttonValue) {
       "maxResults": 25,
       "mine": true
     })
+    	var counter=0;
         request.execute(function(response){
 			var results=response.result;
-			console.log(results);
-			results.items.forEach(item => console.log(item.snippet.title))
+			// console.log(results);
+			console.log(counter);
+			results.items.forEach(function(item){
+				console.log(item.snippet.title)
+				if (item.snippet.title == "Nostalgia Therapy") {
+					counter+= 1;
+				}
+				console.log(counter);
+			})
               },
               function(err) { console.error("Execute error", err); });
   }
