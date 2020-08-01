@@ -28,6 +28,8 @@ function tplawesome(e,t){
       	    .signIn()
         	.then(function() { console.log("Sign-in successful"); },
             function(err) { console.error("Error signing in", err); });
+        }).then(function(){
+        	execCreatePlaylist()
         });
       }
 
