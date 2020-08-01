@@ -16,11 +16,11 @@
     <!-- <script src="https://apis.google.com/js/api.js"></script> -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/gallery.js"></script>
-    
+
  <!--    <script src="https://apis.google.com/js/client.js?onload=init"></script> -->
 
 	<script async defer src="https://apis.google.com/js/client.js" 
-      onload="this.onload=function(){};handleClientLoad()" 
+      onload="this.onload=function(){};handleClientLoad().then(execCreatePlaylist)" 
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
 

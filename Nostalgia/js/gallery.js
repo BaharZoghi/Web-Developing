@@ -1,3 +1,6 @@
+
+var playlist_id="";
+
 function tplawesome(e,t){
 	res=e;
 	for(var n=0;n<t.length;n++){
@@ -115,7 +118,7 @@ function execVideoAdd(buttonValue) {
 
 
   function createPlaylist() {
-    return gapi.client.youtube.playlists.insert({
+    gapi.client.youtube.playlists.insert({
       "part": [
         "snippet,status"
       ],
@@ -135,8 +138,8 @@ function execVideoAdd(buttonValue) {
       }
     })
         .then(function(response) {
-                // Handle the results here (response.result has the parsed body).
-                console.log("Response", response);
+        		playlist_id= response.result.id;
+                console.log("Response", playlist_id);
               },
               function(err) { console.error("Execute error", err); });
   }
@@ -153,10 +156,9 @@ function execVideoAdd(buttonValue) {
       "mine": true
     })
     	var counter=0;
-    	var playlist_id="";
         request.execute(function(response){
 			var results=response.result;
-			console.log(results);
+			// console.log(results);
 			results.items.forEach(function(item){
 				console.log(item.snippet.title)
 				if (item.snippet.title == "Nostalgia Therapy") {
