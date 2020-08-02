@@ -83,7 +83,8 @@ function execVideoAdd(buttonValue) {
       ],
       "resource": {
         "snippet": {
-          "playlistId": "PLYdc5Hf4OFHgoYj36r-yQsQsm3XAaxO5c",
+        	// "PLYdc5Hf4OFHgoYj36r-yQsQsm3XAaxO5c"
+          "playlistId": playlist_id,
           "position": 0,
           "resourceId": {
             "kind": "youtube#video",
@@ -164,7 +165,7 @@ function execVideoAdd(buttonValue) {
 			results.items.forEach(function(item){
 				console.log(item.snippet.title)
 				if (item.snippet.title == "Nostalgia Therapy") {
-					counter+= 1;
+					counter= 1;
 					playlist_id= item.snippet.id;
 				}
 			})
