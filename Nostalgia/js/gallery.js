@@ -162,7 +162,7 @@ function execVideoAdd(buttonValue) {
     	var counter=0;
         request.execute(function(response){
 			var results=response.result;
-			// console.log(results);
+			console.log(results);
 			results.items.forEach(function(item){
 				console.log(item.snippet.title)
 				if (item.snippet.title == "Nostalgia Therapy") {
