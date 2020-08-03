@@ -1,5 +1,5 @@
 
-window.playlist_id="";
+var playlist_id;
 
 function tplawesome(e,t){
 	res=e;
@@ -94,7 +94,7 @@ function execVideoAdd(buttonValue) {
       }
     })
         .then(function(response) {
-                console.log("Response An", window.playlist_id);
+                console.log("Response An", playlist_id);
                 console.log("Response", response);
 
               },
@@ -142,8 +142,8 @@ function execVideoAdd(buttonValue) {
       }
     })
         .then(function(response) {
-        		window.playlist_id= response.result.id;
-                console.log("Response", window.playlist_id);
+        		// playlist_id= response.result.id;
+          //       console.log("Response", playlist_id);
               },
               function(err) { console.error("Execute error", err); });
   }
