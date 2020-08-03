@@ -96,7 +96,7 @@ function execVideoAdd(buttonValue) {
         .then(function(response) {
                 console.log("Response", playlist_id);
                 console.log("Response", response);
-                
+
               },
               function(err) { console.error("Execute error", err); });
   }
@@ -167,8 +167,8 @@ function execVideoAdd(buttonValue) {
 				console.log(item.snippet.title)
 				if (item.snippet.title == "Nostalgia Therapy") {
 					counter= 1;
-					playlist_id= item.snippet.id;
-					console.log(item.snippet.id)
+					playlist_id= item.id;
+					console.log(item.id)
 				}
 			})
 			console.log(counter);
