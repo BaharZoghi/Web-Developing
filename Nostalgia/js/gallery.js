@@ -84,7 +84,7 @@ function execVideoAdd(buttonValue) {
       "resource": {
         "snippet": {
         	// "PLYdc5Hf4OFHgoYj36r-yQsQsm3XAaxO5c"
-          "playlistId": playlist_id,
+          "playlistId": "PLYdc5Hf4OFHgoYj36r-yQsQsm3XAaxO5c",
           "position": 0,
           "resourceId": {
             "kind": "youtube#video",
