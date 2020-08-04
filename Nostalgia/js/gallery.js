@@ -142,7 +142,7 @@ function execVideoAdd(buttonValue) {
       }
     })
         .then(function(response) {
-        		// playlist_id= response.result.id;
+        		playlist_id= response.result.id;
           //       console.log("Response", playlist_id);
               },
               function(err) { console.error("Execute error", err); });
